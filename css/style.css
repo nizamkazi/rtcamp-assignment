@@ -2,3 +2,93 @@
     Created on : Dec 12, 2015, 6:51:19 PM
     Author     : NIZAM
 */
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+body {
+  color: #333333;
+  font-family: "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+ul, li, a, img, input, select, textarea, button {
+  outline: none;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Droid Serif", serif;
+  line-height: 1.25;
+  margin: 0;
+}
+
+a {
+  color: #333333;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+a:hover, a:active, a:focus {
+  color: #666666;
+  text-decoration: none;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+img {
+  max-width: 100%;
+}
+
+small, .small-text, header .top-nav li {
+  font-size: 12px;
+}
+
+.clear {
+  clear: both;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bg-gray {
+  background-color: #eeeaeb;
+}
+
+header .logo-strip {
+  padding: 20px 0;
+}
+header .top-nav li {
+  border-right: 1px solid #333333;
+  float: left;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1;
+}
+header .top-nav li:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+header .search-site {
+  right: 0;
+  bottom: 0;
+  text-align: right;
+}
+
+@media all and (min-width: 992px) {
+  .np-md {
+    padding: 0;
+  }
+}

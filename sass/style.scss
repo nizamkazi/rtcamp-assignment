@@ -2,4 +2,126 @@
     Created on : Dec 12, 2015, 6:51:19 PM
     Author     : NIZAM
 */
+// Import compass variables
+@import 'compass';
 
+// Import Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+
+// COLORS
+$base-color: #333333;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-gray: #eeeaeb;
+$color-gray2: #d5d5d5;
+$color-gray3: #c5c5c5;
+$color-gray4: #d5ccb4;
+$color-gray5: #cac4b4;
+$color-gray6: #dddddd;
+$color-brown: #e6c36e;
+$color-brown2: #c8a551;
+$color-brown3: #b9a071;
+$color-brown4: #f4eede;
+$color-brown5: #947f4b;
+$color-brown6: #91794a;
+$color-brown8: #f3e3bd;
+$color-brown9: #9a844a;
+$color-brown10: #e1c787;
+$color-brown11: #b7974b;
+$color-brown12: #86705e;
+$color-brown13: #e4c16d;
+$color-brown14: #9c793c;
+$color-blue: #044e8e;
+
+// TYPOGRAPHY
+$font-size: 13px;
+$primary-font: "Arial", sans-serif;
+$secondary-font: 'Droid Serif', serif;
+
+// STRUCTURE
+$spacing: 20px;
+
+// Basic CSS
+body{
+    color: $base-color;
+    font-family: $primary-font;
+    font-size: $font-size;
+    line-height: 1.5;
+}
+ul, li, a, img, input, select, textarea, button{
+    outline: none;
+}
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#{ headings() }{
+    font-family: $secondary-font;
+    line-height: 1.25;
+    margin: 0;
+}
+a{
+    color: $base-color;
+    @include transition(all 0.2s linear);
+    &:hover, &:active, &:focus{
+        color: lighten( $base-color, 20 );
+        text-decoration: none;
+        @include transition(all 0.2s linear);
+    }
+}
+img{
+    max-width: 100%;
+}
+small, .small-text{
+    font-size: $font-size * 0.9230769230769231; // 12px
+}
+.clear{
+    clear: both;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.bg-gray{
+    background-color: $color-gray;
+}
+
+//CSS for <header>
+header{
+    .logo-strip{
+        padding: $spacing 0;
+    }
+    .top-nav{
+        li{
+            border-right: 1px solid $base-color;
+            float: left;
+            padding: 0 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            @extend .small-text;
+            line-height: 1;
+            &:last-child{
+                border-right: none;
+                padding-right: 0;
+            }
+            a{
+                
+            }
+        }
+    }
+    .search-site{
+        right: 0;
+        bottom: 0;
+        text-align: right;
+    }
+}
+
+//RESET | SPACING CSS
+@media all and ( min-width: 992px ){
+    .np-md{
+        padding: 0;
+    }
+}

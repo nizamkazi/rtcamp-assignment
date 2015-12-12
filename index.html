@@ -4,9 +4,36 @@
         <title>rtCamp Assignment</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
+        <link href="css/base.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header>
+            <div class="logo-strip bg-gray">
+                <div class="container np-md">
+                    <div class="top-nav row">
+                        <div class="col-sm-12">
+                            <ul class="pull-right">
+                                <li><a href="#" title="Home">Home</a></li>
+                                <li><a href="#" title="Contact Us">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row relative">
+                        <div class="col-sm-6 header-logo">
+                            <a href="index.html" title="rtCamp Exhibition">
+                                <img src="images/site-logo.png" alt="rtCamp" />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 search-site absolute">
+                            <!-- placeholder-google-search.jpg is just a placeholder as Google Site Search can't be used on offline site -->
+                            <img src="images/placeholder-google-search.jpg" alt="placeholder" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <!--end header-->
         <div id="content">
@@ -15,5 +42,19 @@
         <footer>
         </footer>
         <!--end footer-->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- using bootstrap.min.js for mobile menu -->
+        <script src="js/bootstrap.min.js"></script>
+        <!--moment.js is used to show date and time using easy script-->
+        <script src="js/moment.js" type="text/javascript"></script>
+        <!--bxslider for carousel-->
+        <script src="js/jquery.bxslider.min.js" type="text/javascript"></script>
+        <!--fancybox for gallery lightbox-->
+        <script src="js/jquery.fancybox.js" type="text/javascript"></script>
+        <!--tweecool for latest tweet feeds-->
+        <script src="js/tweecool.min.js" type="text/javascript"></script>
+        <!--custom.js to write down own functions or controllers-->
+        <script src="js/custom.js" type="text/javascript"></script>
     </body>
 </html>

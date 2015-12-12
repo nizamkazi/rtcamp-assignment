@@ -6,10 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
         <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/base.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        <!-- JSDK for facebook widget -->
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=211361625571335";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- / JSDK for facebook widget -->
         <header>
             <div class="logo-strip bg-gray">
                 <div class="container np-md">
@@ -88,19 +101,19 @@
                 <div class="col-md-8 main-slider np-md">
                     <ul id="main-slider">
                         <li>
-                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" width="100%" />
+                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" />
                         </li>
                         <li>
-                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" width="100%" />
+                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" />
                         </li>
                         <li>
-                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" width="100%" />
+                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" />
                         </li>
                         <li>
-                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" width="100%" />
+                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" />
                         </li>
                         <li>
-                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" width="100%" />
+                            <img src="images/slider-placeholder.jpg" alt="slider-placeholder" />
                         </li>
                     </ul>
                 </div>
@@ -121,6 +134,191 @@
                 </div>
             </div>
             <div class="row pb-full bb1g"></div>
+            <div class="row carousel mt-full pb-full bb1g">
+                <div class="container-fluid relative">
+                    <!-- have to use image for PREV because creating exact shadow is difficult and brings different result in different browser -->
+                    <div class="prev"></div>
+                    <ul id="carousel">
+                        <li><a href="#" title="img-1"><img src="images/img-1.jpg" alt="img-1" /></a></li>
+                        <li><a href="#" title="img-2"><img src="images/img-2.jpg" alt="img-2" /></a></li>
+                        <li><a href="#" title="img-3"><img src="images/img-3.jpg" alt="img-3" /></a></li>
+                        <li><a href="#" title="img-4"><img src="images/img-4.jpg" alt="img-4" /></a></li>
+                        <li><a href="#" title="img-5"><img src="images/img-5.jpg" alt="img-5" /></a></li>
+                        <li><a href="#" title="img-1"><img src="images/img-1.jpg" alt="img-1" /></a></li>
+                        <li><a href="#" title="img-2"><img src="images/img-2.jpg" alt="img-2" /></a></li>
+                        <li><a href="#" title="img-3"><img src="images/img-3.jpg" alt="img-3" /></a></li>
+                        <li><a href="#" title="img-4"><img src="images/img-4.jpg" alt="img-4" /></a></li>
+                        <li><a href="#" title="img-5"><img src="images/img-5.jpg" alt="img-5" /></a></li>
+                    </ul>
+                    <!-- have to use image for NEXT because creating exact shadow is difficult and brings different result in different browser -->
+                    <div class="next"></div>
+                </div>
+            </div>
+            <div class="row mt-full pb-full bb1g">
+                <div class="col-md-8 content">
+                    <!--content area-->
+                    <div class="container-fluid">
+                        <div class="row gallery bb1g">
+                            <h3 class="title">Glimpses of Exhibition</h3>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="text-center col-md-3 col-sm-4 col-xs-6">
+                                        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-golf.jpg">
+                                            <img src="images/img-golf.jpg" alt="img-golf" title="golf" />
+                                            <p class="text-left">Golf</p>
+                                        </a>
+                                    </div>
+                                    <div class="text-center col-md-3 col-sm-4 col-xs-6">
+                                        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-basketball.jpg">
+                                            <img src="images/img-basketball.jpg" alt="img-basketball" title="basketball" />
+                                            <p class="text-left">BasketBall</p>
+                                        </a>
+                                    </div>
+                                    <div class="text-center col-md-3 col-sm-4 col-xs-6">
+                                        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-tennis.jpg">
+                                            <img src="images/img-tennis.jpg" alt="img-tennis" title="tennis" />
+                                            <p class="text-left">Tennis</p>
+                                        </a>
+                                    </div>
+                                    <div class="text-center col-md-3 col-sm-4 col-xs-6">
+                                        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-football.jpg">
+                                            <img src="images/img-football.jpg" alt="img-football" title="football" />
+                                            <p class="text-left">FootBall</p>
+                                        </a>
+                                    </div>
+                                    <div class="text-center col-md-3 col-sm-4 col-xs-6">
+                                        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-football.jpg">
+                                            <img src="images/img-football.jpg" alt="img-football" title="football" />
+                                            <p class="text-left">FootBall</p>
+                                        </a>
+                                    </div>
+                                    <div class="text-center col-md-3 col-sm-4 col-xs-6">
+                                        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-tennis.jpg">
+                                            <img src="images/img-tennis.jpg" alt="img-tennis" title="tennis" />
+                                            <p class="text-left">Tennis</p>
+                                        </a>
+                                    </div>
+                                    <div class="text-center col-md-3 col-sm-4 col-xs-6">
+                                        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-golf.jpg">
+                                            <img src="images/img-golf.jpg" alt="img-golf" title="golf" />
+                                            <p class="text-left">Golf</p>
+                                        </a>
+                                    </div>
+                                    <div class="text-center col-md-3 col-sm-4 col-xs-6">
+                                        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-basketball.jpg">
+                                            <img src="images/img-basketball.jpg" alt="img-basketball" title="basketball" />
+                                            <p class="text-left">BasketBall</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-full">
+                            <div class="col-sm-5 latest-tweet">
+                                <h3 class="title">Latest Tweets</h3>
+                                <!--latest tweet widget here-->
+                                <div id="tweecool" class="container-fluid"></div>
+                            </div>
+                            <div class="col-sm-7 facebook-widget">
+                                <h3 class="title">Follow us on Facebook</h3>
+                                <!-- facebook widget here | this widget won't show on localhost -->
+                                <div class="container-fluid">
+                                    <div class="fb-page" data-href="https://www.facebook.com/rtCamp.solutions" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                        <div class="fb-xfbml-parse-ignore">
+                                            <blockquote cite="https://www.facebook.com/rtCamp.solutions">
+                                                <a href="https://www.facebook.com/rtCamp.solutions">rtCamp</a>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 rt-sidebar">
+                    <!--right sidebar-->
+                    <div class="news widget">
+                        <h3 class="title">News</h3>
+                        <!--news widget here-->
+                        <div id="news">
+                            <div>
+                                <div class="pull-left">
+                                    <img class="thick-border" src="images/news-pic.jpg" alt="news" />
+                                </div>
+                                <div class="heading">
+                                    <h5><a href="#" title="headline"> The exhibition will be
+                                            organized to be the perfect
+                                            forum.</a></h5>
+                                    <span>November 4, 2012.</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="news-list mt-full">
+                            <ul>
+                                <li>
+                                    <a href="#" title="#">Website coming soon.</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="#">Best sport photogrpher award.</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="#">Educational worshop and meeting.</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="#">Website coming soon.</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="#">Best sport photogrpher award.</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="#">Educational worshop and meeting.</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="news-footer mt-full">
+                            <span class="prev-news"></span>
+                            <span class="next-news"></span>
+                            <span class="pull-right">
+                                <a href="#" title="More News">More News</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weather widget">
+                        <h3 class="title">Weather</h3>
+                        <!--weather widget here-->
+                        <a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal"></a>
+                        <div id="awcc1449087305950" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1449087305950"></div>
+                        <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+                    </div>
+                    <div class="date-time widget">
+                        <h3 class="title">Date and Time</h3>
+                        <!--date time widget here-->
+                        <p id="date"></p>
+                        <p id="time"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row clients-slider mt-full pb-full bb1g">
+                <div class="col-sm-12">
+                    <h3 class="title">Our Partners</h3>
+                    <!--client slider here-->
+                </div>
+                <div class="col-sm-12 mt-full">
+                    <div class="relative">
+                        <div class="prev-client"></div>
+                        <ul id="client-slider">
+                            <li><a href="#" title="img-1"><img src="images/logo-adidas.png" alt="img-1" /></a></li>
+                            <li><a href="#" title="img-2"><img src="images/logo-cocacola.png" alt="img-2" /></a></li>
+                            <li><a href="#" title="img-3"><img src="images/logo-sony.png" alt="img-3" /></a></li>
+                            <li><a href="#" title="img-4"><img src="images/logo-emirates.png" alt="img-4" /></a></li>
+                            <li><a href="#" title="img-5"><img src="images/logo-visa.png" alt="img-5" /></a></li>
+                        </ul>
+                        <!-- have to use image for NEXT because creating exact shadow is difficult and brings different result in different browser -->
+                        <div class="next-client"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--end #content-->
         <footer>

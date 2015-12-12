@@ -38,9 +38,12 @@ $color-blue: #044e8e;
 $font-size: 13px;
 $primary-font: "Arial", sans-serif;
 $secondary-font: 'Droid Serif', serif;
+$icon-font: 'FontAwesome';
 
 //STRUCTURE
 $spacing: 20px;
+
+
 
 /*Basic CSS*/
 body{
@@ -77,6 +80,9 @@ img{
 }
 small, .small-text{
     font-size: $font-size * 0.9230769230769231; // 12px
+}
+.big-text{
+    font-size: $font-size * 1.230769230769231;
 }
 .clear{
     clear: both;
@@ -147,17 +153,17 @@ header{
 .navbar-default{
     .navbar-toggle{
         border: none;
-        span.icon-bar{
+        .icon-bar{
             background-color: $color-white;
         }
         &:hover, &:active, &:focus{
             background-color: transparent;
-            span.icon-bar{
+            .icon-bar{
                 background-color: darken( $color-white, 10)
             }
         }
         &.collapsed{
-            span.icon-bar{
+            .icon-bar{
                 background-color: $color-white;
             }
         }
@@ -211,10 +217,235 @@ header{
         }
     }
 }
+.carousel{
+    ul{
+        li{
+            border: 6px solid $color-gray;
+            @include transition(all 0.2s);
+            &:hover{
+                border-color: $color-brown;
+                @include transition(all 0.2s);
+            }
+        }
+    }
+    .next, .prev{
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+    .prev{
+        left: $spacing / 2;
+    }
+    .next{
+        right: $spacing / 2;
+    }
+}
+.title, a.title{
+    font-family: $secondary-font;
+    font-weight: bold;
+    @extend .big-text;
+    background-color: $color-brown4;
+    color: $base-color;
+    border-left: 9px solid $color-brown;
+    padding: $spacing / 2;
+    margin-bottom: $spacing / 2;
+}
+.gallery{
+    .row{
+        .col-md-3{
+            padding-left: $spacing / 4;
+            padding-right: $spacing / 4;
+        }
+    }
+    .fancybox-thumbs{
+        /*padding-left: 5px;*/
+        /*padding-right: 5px;*/
+        padding-bottom: 10px;
+        text-align: center;
+        display: inline-block;
+        img{
+            border: 4px solid $color-gray5;
+            display: inline-block;
+            cursor: pointer;
+            @include transition(all 0.2s);
+            &:hover{
+                border-color: $color-brown;
+                @include transition(all 0.2s);
+            }
+        }
+        &:hover img{
+            border-color: $color-brown;
+            @include transition(all 0.2s);
+        }
+        p{
+            margin-top: $spacing / 4;
+            color: $color-blue;
+        }
+    }
+}
+.latest-tweet{
+    ul{
+        li{
+            padding-top: $spacing / 2;
+            padding-bottom: $spacing;
+            border-bottom: dotted 1px $color-gray6;
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+/*#rt-sider css*/
+.widget{
+    border-bottom: 1px solid $color-gray3;
+    padding-bottom: $spacing;
+    margin-top: $spacing;
+    float: left;
+    width: 100%;
+    &:first-child{
+        margin-top: 0;
+    }
+    &:last-child{
+        border-bottom: none;
+    }
+    p{
+        margin: 0;
+    }
+}
+.news{
+    .thick-border{
+        border: 4px solid $color-gray5;
+    }
+    .heading{
+        padding-left: 110px;
+        h5{
+            a{
+                color: $base-color;
+                font-weight: bold;
+                &:hover{
+                    color: lighten( $base-color, 20 );
+                }
+            }
+        }
+        span{
+            @extend .small-text;
+        }
+    }
+    .news-list{
+        ul{
+            display: inline-block;
+        }
+        li{
+            float: left;
+            clear: both;
+            &:before{
+                font-family: $icon-font;
+                content: "\f101";
+            }
+        }
+    }
+    a{
+        color: $color-blue;
+        &:hover{
+            color: lighten( $color-blue, 20 );
+        }
+    }
+    .news-footer{
+        .next-news, .prev-news{
+            width: 18px;
+            height: 21px;
+            display: inline-block;
+            background-color: $color-brown4;
+            border: 1px solid $color-brown10;
+            color: $color-brown11;
+            text-align: center;
+            a{
+                color: $color-brown11;
+                display: block;
+                &:hover{
+                    color: lighten( $color-brown11, 20 );
+                }
+            }
+        }
+    }
+}
+.weather{
+    .aw-widget-current-inner{
+        padding: 0;
+        margin: 0;
+    }
+    #link_get_widget{
+        display: none;
+    }
+
+}
+.date-time{
+    #date{
+        @extend .big-text;
+    }
+    #time{
+        font-family: $secondary-font;
+        font-size: 60px;
+    }
+
+}
+
+/*footer area css*/
+.clients-slider{
+    .next-client, .prev-client{
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+    .next-client{
+        right: $spacing / 2;
+    }
+    .prev-client{
+        left: $spacing / 2;
+    }
+    li{
+        height: 110px;
+        position: relative;
+        a{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            @include transform(translate(-50%, -50%));
+            width: 100%;
+            text-align: center;
+            img{
+                display: inline-block;
+            }
+        }
+    }
+
+}
+
 /*RESET | SPACING CSS*/
-@media all and ( min-width: 992px ){
+@media only screen and ( min-width: 992px ){
     .np-md{
         padding: 0;
+    }
+    .content{
+        border-right: 1px solid $color-gray3;
+    }
+    /*below css shows border incase sidebar is taller than content area*/
+    .rt-sidebar{
+        border-left: 1px solid $color-gray3;
+        margin-left: -1px;
+    }
+}
+@media only screen and ( min-width: 768px){
+    .latest-tweet{
+        border-right: 1px solid $color-gray3;
+        padding-left: 0;
+    }
+    /*below css shows border incase sidebar is taller than content area*/
+    .facebook-widget{
+        border-left: 1px solid $color-gray3;
+        margin-left: -1px;
+        padding-right: 0;
     }
 }
 .pb-full{

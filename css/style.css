@@ -2,12 +2,15 @@
     Created on : Dec 12, 2015, 6:51:19 PM
     Author     : NIZAM
 */
+/*Import Google Fonts*/
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+/*Basic CSS*/
 body {
   color: #333333;
   font-family: "Arial", sans-serif;
   font-size: 13px;
   line-height: 1.5;
+  box-sizing: border-box;
 }
 
 ul, li, a, img, input, select, textarea, button {
@@ -66,6 +69,7 @@ small, .small-text, header .top-nav li {
   background-color: #eeeaeb;
 }
 
+/*CSS for <header>*/
 header .logo-strip {
   padding: 20px 0;
 }
@@ -87,8 +91,106 @@ header .search-site {
   text-align: right;
 }
 
+.main-navbar {
+  background-color: #e6c36e;
+}
+.main-navbar .navbar.navbar-default {
+  margin-bottom: 0;
+  background-color: transparent;
+  border: none;
+  min-height: 30px;
+}
+.main-navbar ul.nav li a {
+  color: #333333;
+  padding: 10px 14.5px;
+  line-height: normal;
+  font-weight: bold;
+}
+.main-navbar ul.nav li a:hover, .main-navbar ul.nav li a .active {
+  background-color: #c8a551;
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+}
+.navbar-default .navbar-toggle span.icon-bar {
+  background-color: #FFFFFF;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active, .navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle:hover span.icon-bar, .navbar-default .navbar-toggle:active span.icon-bar, .navbar-default .navbar-toggle:focus span.icon-bar {
+  background-color: #e6e6e6;
+}
+.navbar-default .navbar-toggle.collapsed span.icon-bar {
+  background-color: #FFFFFF;
+}
+
+/*#content css*/
+.slider-row {
+  background-color: #eeeaeb;
+  border-bottom: 5px solid #dcd7d3;
+}
+
+.welcome-text {
+  padding: 20px;
+}
+.welcome-text h1 {
+  color: #b9a071;
+  font-size: 20.0px;
+  margin-bottom: 20px;
+}
+.welcome-text img.avatar {
+  border: 6px solid #d5d5d5;
+  margin: 0 10px 10px 0;
+}
+.welcome-text a.readmore {
+  color: #91794a;
+  font-weight: bold;
+}
+.welcome-text a.readmore:hover {
+  color: #ae9460;
+}
+
+.main-slider .bx-wrapper {
+  margin-bottom: 0;
+}
+.main-slider .bx-wrapper .bx-pager {
+  padding: 0;
+  bottom: 20px;
+  text-align: right;
+  font-size: 1px;
+  right: 15px;
+}
+.main-slider .bx-wrapper .bx-pager a {
+  width: 18px;
+  height: 18px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #e6c36e;
+  background-color: #86705e;
+}
+.main-slider .bx-wrapper .bx-pager a.active {
+  border-color: #FFFFFF;
+  background-color: #86705e;
+}
+
+/*RESET | SPACING CSS*/
 @media all and (min-width: 992px) {
   .np-md {
     padding: 0;
   }
+}
+.pb-full {
+  padding-bottom: 20px;
+}
+
+.mt-full {
+  margin-top: 20px;
+}
+
+.bb1g {
+  border-bottom: 1px solid #c5c5c5;
 }

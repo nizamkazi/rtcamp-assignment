@@ -5,10 +5,10 @@
 // Import compass variables
 @import 'compass';
 
-// Import Google Fonts
+/*Import Google Fonts*/
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
 
-// COLORS
+//COLORS
 $base-color: #333333;
 $color-white: #FFFFFF;
 $color-black: #000000;
@@ -18,6 +18,7 @@ $color-gray3: #c5c5c5;
 $color-gray4: #d5ccb4;
 $color-gray5: #cac4b4;
 $color-gray6: #dddddd;
+$color-gray7: #dcd7d3;
 $color-brown: #e6c36e;
 $color-brown2: #c8a551;
 $color-brown3: #b9a071;
@@ -33,20 +34,21 @@ $color-brown13: #e4c16d;
 $color-brown14: #9c793c;
 $color-blue: #044e8e;
 
-// TYPOGRAPHY
+//TYPOGRAPHY
 $font-size: 13px;
 $primary-font: "Arial", sans-serif;
 $secondary-font: 'Droid Serif', serif;
 
-// STRUCTURE
+//STRUCTURE
 $spacing: 20px;
 
-// Basic CSS
+/*Basic CSS*/
 body{
     color: $base-color;
     font-family: $primary-font;
     font-size: $font-size;
     line-height: 1.5;
+    box-sizing: border-box;
 }
 ul, li, a, img, input, select, textarea, button{
     outline: none;
@@ -89,7 +91,7 @@ small, .small-text{
     background-color: $color-gray;
 }
 
-//CSS for <header>
+/*CSS for <header>*/
 header{
     .logo-strip{
         padding: $spacing 0;
@@ -108,7 +110,7 @@ header{
                 padding-right: 0;
             }
             a{
-                
+
             }
         }
     }
@@ -118,10 +120,109 @@ header{
         text-align: right;
     }
 }
+.main-navbar{
+    background-color: $color-brown;
+    .navbar.navbar-default{
+        margin-bottom: 0;
+        background-color: transparent;
+        border: none;
+        min-height: 30px;
 
-//RESET | SPACING CSS
+    }
+    ul.nav{
+        li{
+            a{
+                color: $base-color;
+                padding: 10px 14.5px;
+                line-height: normal;
+                font-weight: bold;
+                &:hover, .active{
+                    background-color: $color-brown2;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+.navbar-default{
+    .navbar-toggle{
+        border: none;
+        span.icon-bar{
+            background-color: $color-white;
+        }
+        &:hover, &:active, &:focus{
+            background-color: transparent;
+            span.icon-bar{
+                background-color: darken( $color-white, 10)
+            }
+        }
+        &.collapsed{
+            span.icon-bar{
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+/*#content css*/
+.slider-row{
+    background-color: $color-gray;
+    border-bottom: 5px solid $color-gray7;
+}
+.welcome-text{
+    padding: 20px;
+    h1{
+        color: $color-brown3;
+        font-size: $font-size * 1.538461538461538;
+        margin-bottom: $spacing;
+    }
+    img.avatar{
+        border: 6px solid $color-gray2;
+        margin: 0 10px 10px 0;
+    }
+    a.readmore{
+        color: $color-brown6;
+        font-weight: bold;
+        &:hover{
+            color: lighten( $color-brown6, 10);
+        }
+    }
+}
+.main-slider{
+    .bx-wrapper{
+        margin-bottom: 0;
+        .bx-pager{
+            padding: 0;
+            bottom: 20px;
+            text-align: right;
+            font-size: 1px;
+            right: 15px;
+            a{
+                width: 18px;
+                height: 18px;
+                @include border-radius(10px);
+                border: 2px solid $color-brown;
+                background-color: $color-brown12;
+                &.active{
+                    border-color: $color-white;
+                    background-color: $color-brown12;
+                }
+            }
+        }
+    }
+}
+/*RESET | SPACING CSS*/
 @media all and ( min-width: 992px ){
     .np-md{
         padding: 0;
     }
+}
+.pb-full{
+    padding-bottom: $spacing;
+}
+.mt-full{
+    margin-top: $spacing;
+}
+.bb1g{
+    border-bottom: 1px solid $color-gray3;
 }

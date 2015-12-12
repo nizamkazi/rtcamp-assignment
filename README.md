@@ -11,9 +11,9 @@ This is an assignment I have created to apply for Front End Developer position a
 ###List of CSS files
 1. `base.css` to add bootstrap responsive layout support and to reset, it is generating for `base.scss` file located in `sass`folder.
 2. `style.css` to write my css, this file is generating via `style.scss` located in `sass` folder.
-3. ~~`font-awesome.min.css` to add Font Awsome icon support.~~
-4. `jquery.bxslider.css` CSS for BXslider plugin.
-5. `jquery.fancybox.css` CSS for FancyBox plugin.
+~~3. `font-awesome.min.css` to add Font Awsome icon support.~~
+3. `jquery.bxslider.css` CSS for BXslider plugin.
+4. `jquery.fancybox.css` CSS for FancyBox plugin.
 
 ###List of SCSS files
 1. `_bootstrap-variables.scss` includes boostrap SASS.

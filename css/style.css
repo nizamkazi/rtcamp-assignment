@@ -53,7 +53,7 @@ small, .small-text, header .top-nav li, .news .heading span {
   font-size: 12px;
 }
 
-.big-text, .title, a.title, .date-time #date {
+.big-text, .title, a.title, .date-time #date, footer h3 {
   font-size: 16px;
 }
 
@@ -378,6 +378,51 @@ header .search-site {
 }
 .clients-slider li a img {
   display: inline-block;
+}
+
+footer {
+  background-color: #e6c36e;
+}
+footer h3 {
+  font-weight: bold;
+  border-bottom: 1px solid #9c793c;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+footer li {
+  float: left;
+  clear: both;
+  line-height: 1;
+  padding-bottom: 15px;
+}
+footer li:before {
+  font-family: "FontAwesome";
+  content: "\f101";
+}
+footer li a {
+  padding-left: 10px;
+}
+footer .footer-logo {
+  margin-top: 10px;
+}
+footer .copyrights {
+  margin-top: 40px;
+  font-size: 12px;
+}
+footer .copyrights .links a {
+  border-right: 1px solid;
+  float: left;
+  padding: 0 5px;
+  line-height: 1;
+}
+footer .copyrights .links a:last-child {
+  border-right: none;
+}
+footer .disclaim {
+  background-color: #947f4b;
+  padding: 10px 0;
+  color: #f3e3bd;
+  font-size: 11px;
 }
 
 /*RESET | SPACING CSS*/

@@ -421,6 +421,51 @@ header{
     }
 
 }
+footer{
+    background-color: $color-brown;
+    h3{
+        @extend .big-text;
+        font-weight: bold;
+        border-bottom: 1px solid $color-brown14;
+        padding-bottom: $spacing / 4;
+        margin-bottom: $spacing;
+    }
+    li{
+        float: left;
+        clear: both;
+        line-height: 1;
+        padding-bottom: 15px;
+        &:before{
+            font-family: "FontAwesome";
+            content: "\f101";
+        }
+        a{
+            padding-left: 10px;
+        }
+    }
+    .footer-logo{
+        margin-top: $spacing / 2;
+    }
+    .copyrights{
+        margin-top: $spacing * 2;
+        font-size: 12px;
+        .links a{
+            border-right: 1px solid;
+            float: left;
+            padding: 0 5px;
+            line-height: 1;
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+    .disclaim{
+        background-color: $color-brown5;
+        padding: 10px 0;
+        color: $color-brown8;
+        font-size: 11px;
+    }
+}
 
 /*RESET | SPACING CSS*/
 @media only screen and ( min-width: 992px ){

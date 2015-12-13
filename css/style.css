@@ -2,8 +2,6 @@
     Created on : Dec 12, 2015, 6:51:19 PM
     Author     : NIZAM
 */
-/*Import Google Fonts*/
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
 /*Basic CSS*/
 body {
   color: #333333;
@@ -21,6 +19,7 @@ ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: inline-block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -157,6 +156,9 @@ header .search-site {
   color: #ae9460;
 }
 
+.main-slider {
+  padding: 0;
+}
 .main-slider .bx-wrapper {
   margin-bottom: 0;
 }
@@ -176,9 +178,12 @@ header .search-site {
   border: 2px solid #e6c36e;
   background-color: #86705e;
 }
-.main-slider .bx-wrapper .bx-pager a.active {
+.main-slider .bx-wrapper .bx-pager a.active, .main-slider .bx-wrapper .bx-pager a:hover {
   border-color: #FFFFFF;
   background-color: #86705e;
+}
+.main-slider img {
+  width: 100%;
 }
 
 .carousel ul li {
@@ -216,8 +221,10 @@ header .search-site {
   background-color: #f4eede;
   color: #333333;
   border-left: 9px solid #e6c36e;
-  padding: 10px;
+  padding: 0 10px;
   margin-bottom: 10px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .gallery .row .col-md-3 {
@@ -276,9 +283,6 @@ header .search-site {
   float: left;
   width: 100%;
 }
-.widget:first-child {
-  margin-top: 0;
-}
 .widget:last-child {
   border-bottom: none;
 }
@@ -298,9 +302,6 @@ header .search-site {
 }
 .news .heading h5 a:hover {
   color: #666666;
-}
-.news .news-list ul {
-  display: inline-block;
 }
 .news .news-list li {
   float: left;
@@ -389,17 +390,17 @@ footer h3 {
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
-footer li {
+footer ul.arrows li {
   float: left;
   clear: both;
   line-height: 1;
   padding-bottom: 15px;
 }
-footer li:before {
+footer ul.arrows li:before {
   font-family: "FontAwesome";
   content: "\f101";
 }
-footer li a {
+footer ul.arrows li a {
   padding-left: 10px;
 }
 footer .footer-logo {
@@ -409,13 +410,13 @@ footer .copyrights {
   margin-top: 40px;
   font-size: 12px;
 }
-footer .copyrights .links a {
+footer .copyrights .links li {
   border-right: 1px solid;
   float: left;
   padding: 0 5px;
   line-height: 1;
 }
-footer .copyrights .links a:last-child {
+footer .copyrights .links li:last-child {
   border-right: none;
 }
 footer .disclaim {
@@ -426,7 +427,7 @@ footer .disclaim {
 }
 
 /*RESET | SPACING CSS*/
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .np-md {
     padding: 0;
   }
@@ -440,8 +441,32 @@ footer .disclaim {
     border-left: 1px solid #c5c5c5;
     margin-left: -1px;
   }
+
+  .widget:first-child {
+    margin-top: 0;
+  }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /*help to align navigation in center*/
+  .main-navbar {
+    overflow: hidden;
+  }
+  .main-navbar ul.nav.navbar-nav {
+    position: relative;
+    left: 50%;
+    text-align: center;
+  }
+  .main-navbar ul.nav.navbar-nav li {
+    position: relative;
+    left: -50%;
+    float: none;
+    display: inline-block;
+  }
+  .main-navbar ul.nav.navbar-nav li a {
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
   .latest-tweet {
     border-right: 1px solid #c5c5c5;
     padding-left: 0;
@@ -452,6 +477,44 @@ footer .disclaim {
     border-left: 1px solid #c5c5c5;
     margin-left: -1px;
     padding-right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header .header-logo {
+    text-align: center;
+    margin-top: 20px;
+  }
+  header .search-site {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    right: auto;
+    bottom: auto;
+  }
+
+  #content .main-slider .bx-wrapper {
+    margin-bottom: 40px;
+  }
+  #content .main-slider .bx-wrapper .bx-pager {
+    right: auto;
+    bottom: -30px;
+    text-align: center;
+  }
+  #content .main-slider .bx-wrapper .bx-pager a {
+    height: 15px;
+    width: 15px;
+    font-size: 1px;
+  }
+
+  .latest-tweet, .facebook-widget {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c5c5c5;
+  }
+
+  .facebook-widget {
+    margin-top: 20px;
   }
 }
 .pb-full {

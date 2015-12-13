@@ -5,34 +5,15 @@
 // Import compass variables
 @import 'compass';
 
-/*Import Google Fonts*/
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
-
 //COLORS
-$base-color: #333333;
-$color-white: #FFFFFF;
-$color-black: #000000;
-$color-gray: #eeeaeb;
-$color-gray2: #d5d5d5;
-$color-gray3: #c5c5c5;
-$color-gray4: #d5ccb4;
-$color-gray5: #cac4b4;
-$color-gray6: #dddddd;
-$color-gray7: #dcd7d3;
-$color-brown: #e6c36e;
-$color-brown2: #c8a551;
-$color-brown3: #b9a071;
-$color-brown4: #f4eede;
-$color-brown5: #947f4b;
-$color-brown6: #91794a;
-$color-brown8: #f3e3bd;
-$color-brown9: #9a844a;
-$color-brown10: #e1c787;
-$color-brown11: #b7974b;
-$color-brown12: #86705e;
-$color-brown13: #e4c16d;
-$color-brown14: #9c793c;
-$color-blue: #044e8e;
+$base-color: #333333;       $color-white: #FFFFFF;      $color-black: #000000;
+$color-gray: #eeeaeb;       $color-gray2: #d5d5d5;      $color-gray3: #c5c5c5;
+$color-gray4: #d5ccb4;      $color-gray5: #cac4b4;      $color-gray6: #dddddd;
+$color-gray7: #dcd7d3;      $color-brown: #e6c36e;      $color-brown2: #c8a551;
+$color-brown3: #b9a071;     $color-brown4: #f4eede;     $color-brown5: #947f4b;
+$color-brown6: #91794a;     $color-brown8: #f3e3bd;     $color-brown9: #9a844a;
+$color-brown10: #e1c787;    $color-brown11: #b7974b;    $color-brown12: #86705e;
+$color-brown13: #e4c16d;    $color-brown14: #9c793c;    $color-blue: #044e8e;
 
 //TYPOGRAPHY
 $font-size: 13px;
@@ -60,6 +41,7 @@ ul, li{
     list-style: none;
     margin: 0;
     padding: 0;
+    display: inline-block;
 }
 #{ headings() }{
     font-family: $secondary-font;
@@ -195,6 +177,7 @@ header{
     }
 }
 .main-slider{
+    padding: 0;
     .bx-wrapper{
         margin-bottom: 0;
         .bx-pager{
@@ -209,12 +192,15 @@ header{
                 @include border-radius(10px);
                 border: 2px solid $color-brown;
                 background-color: $color-brown12;
-                &.active{
+                &.active, &:hover{
                     border-color: $color-white;
                     background-color: $color-brown12;
                 }
             }
         }
+    }
+    img{
+        width: 100%;
     }
 }
 .carousel{
@@ -247,8 +233,10 @@ header{
     background-color: $color-brown4;
     color: $base-color;
     border-left: 9px solid $color-brown;
-    padding: $spacing / 2;
+    padding: 0 $spacing / 2;
     margin-bottom: $spacing / 2;
+    height: 30px;
+    line-height: 30px;
 }
 .gallery{
     .row{
@@ -303,9 +291,6 @@ header{
     margin-top: $spacing;
     float: left;
     width: 100%;
-    &:first-child{
-        margin-top: 0;
-    }
     &:last-child{
         border-bottom: none;
     }
@@ -333,9 +318,6 @@ header{
         }
     }
     .news-list{
-        ul{
-            display: inline-block;
-        }
         li{
             float: left;
             clear: both;
@@ -430,17 +412,19 @@ footer{
         padding-bottom: $spacing / 4;
         margin-bottom: $spacing;
     }
-    li{
-        float: left;
-        clear: both;
-        line-height: 1;
-        padding-bottom: 15px;
-        &:before{
-            font-family: "FontAwesome";
-            content: "\f101";
-        }
-        a{
-            padding-left: 10px;
+    ul.arrows{
+        li{
+            float: left;
+            clear: both;
+            line-height: 1;
+            padding-bottom: 15px;
+            &:before{
+                font-family: "FontAwesome";
+                content: "\f101";
+            }
+            a{
+                padding-left: 10px;
+            }
         }
     }
     .footer-logo{
@@ -449,7 +433,7 @@ footer{
     .copyrights{
         margin-top: $spacing * 2;
         font-size: 12px;
-        .links a{
+        .links li{
             border-right: 1px solid;
             float: left;
             padding: 0 5px;
@@ -468,7 +452,7 @@ footer{
 }
 
 /*RESET | SPACING CSS*/
-@media only screen and ( min-width: 992px ){
+@media screen and ( min-width: 992px ){
     .np-md{
         padding: 0;
     }
@@ -480,8 +464,31 @@ footer{
         border-left: 1px solid $color-gray3;
         margin-left: -1px;
     }
+    .widget:first-child{
+        margin-top: 0;
+    }
 }
-@media only screen and ( min-width: 768px){
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    /*help to align navigation in center*/
+    .main-navbar{
+        overflow: hidden;
+        ul.nav.navbar-nav{
+            position: relative;
+            left: 50%;
+            text-align: center;
+            li{
+                position: relative;
+                left:-50%;
+                float: none;
+                display: inline-block;
+                a{
+                    padding: $spacing / 2;
+                }
+            }
+        }
+    }
+}
+@media screen and ( min-width: 768px){
     .latest-tweet{
         border-right: 1px solid $color-gray3;
         padding-left: 0;
@@ -491,6 +498,48 @@ footer{
         border-left: 1px solid $color-gray3;
         margin-left: -1px;
         padding-right: 0;
+    }
+}
+@media only screen and (max-width: 767px){
+    header{
+        .header-logo{
+            text-align: center;
+            margin-top: $spacing;
+        }
+        .search-site{
+            position: relative;
+            margin-top: $spacing;
+            text-align: center;
+            right: auto;
+            bottom: auto;
+        }
+    }
+    #content{
+        .main-slider{
+            .bx-wrapper{
+                margin-bottom: 40px;
+                .bx-pager{
+                    right: auto;
+                    bottom: -30px;
+                    text-align: center;
+                    a{
+                        height: 15px;
+                        width: 15px;
+                        font-size: 1px;
+                    }
+
+                }
+            }
+        }
+    }
+    .latest-tweet, .facebook-widget{
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: $spacing;
+        border-bottom: 1px solid $color-gray3;
+    }
+    .facebook-widget{
+        margin-top: $spacing;
     }
 }
 .pb-full{

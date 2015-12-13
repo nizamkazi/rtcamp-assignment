@@ -11,10 +11,10 @@ $(document).ready(function () {
         nextText: '<i class="fa fa-angle-right"></i>',
         prevText: '<i class="fa fa-angle-left"></i>'
     });
+
 });
-$(document).ready(function () {
-    var maxSlides,
-            width = $(window).width();
+$(document).ready(function bxresize() {
+    width = $(window).width();
     if (width < 440) {
         maxSlides = 1;
     }
@@ -34,7 +34,7 @@ $(document).ready(function () {
         nextSelector: '.next',
         prevSelector: '.prev',
         nextText: '<img src="images/carousel-arrow-right.png" alt="next">',
-        prevText: '<img src="images/carousel-arrow-left.png" alt="next">',
+        prevText: '<img src="images/carousel-arrow-left.png" alt="prev">',
         slideWidth: 170,
         slideMargin: 5
     });
